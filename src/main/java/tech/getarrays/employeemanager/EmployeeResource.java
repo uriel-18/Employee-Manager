@@ -26,6 +26,7 @@ public class EmployeeResource {
         Employee employee = (Employee) employeeService.findAllEmployees();
         return new ResponseEntity<>(employee, HttpStatus.OK);
     }
+
     @PostMapping("/add")
     public ResponseEntity<Employee> addEmployee(@RequestBody Employee employee) {
         Employee newEmployee= employeeService.addEmployee(employee);
